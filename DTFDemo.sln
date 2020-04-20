@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTFDemoWorker", "DTFDemo\DTFDemoWorker.csproj", "{84CB9392-2891-458D-852B-228B97B4B190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTFCLient", "DTFCLient\DTFCLient.csproj", "{9F9448A2-9DFD-449F-92F6-5605D8EB1CE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domains", "Domains\Domains.csproj", "{DBDD5ACB-1C23-4D88-84D0-81D3EE34E420}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{84CB9392-2891-458D-852B-228B97B4B190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84CB9392-2891-458D-852B-228B97B4B190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84CB9392-2891-458D-852B-228B97B4B190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84CB9392-2891-458D-852B-228B97B4B190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F9448A2-9DFD-449F-92F6-5605D8EB1CE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F9448A2-9DFD-449F-92F6-5605D8EB1CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F9448A2-9DFD-449F-92F6-5605D8EB1CE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F9448A2-9DFD-449F-92F6-5605D8EB1CE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBDD5ACB-1C23-4D88-84D0-81D3EE34E420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBDD5ACB-1C23-4D88-84D0-81D3EE34E420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBDD5ACB-1C23-4D88-84D0-81D3EE34E420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBDD5ACB-1C23-4D88-84D0-81D3EE34E420}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0537807B-B4D3-4FA4-AA40-D20B74F5691A}
+	EndGlobalSection
+EndGlobal
