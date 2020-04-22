@@ -17,7 +17,7 @@ namespace DTFDemo
     {
         static void Main(string[] args)
         {
-            startAsync();
+            startAsync().GetAwaiter().GetResult();
             while (true)
             {
                 Thread.Sleep(1000);
@@ -28,12 +28,13 @@ namespace DTFDemo
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse("UseDevelopmentStorage=true;DevelopmentStorageProxyUri=http://127.0.0.1;");
 
-            IOrchestrationServiceInstanceStore store = new AzureTableInstanceStore("TestTaskHub", "UseDevelopmentStorage=true;DevelopmentStorageProxyUri= http://127.0.0.1;");
+            IOrchestrationServiceInstanceStore store = new AzureTableInstanceStore("TestTaskHub9", "UseDevelopmentStorage=true;DevelopmentStorageProxyUri= http://127.0.0.1;");
             var settings = new ServiceBusOrchestrationServiceSettings();
-            var service = new ServiceBusOrchestrationService("<servicebus>", "TestTaskHub", store, null, settings);
+            var service = new ServiceBusOrchestrationService("<ServiceBUsConnectionString>", "TestTaskHub9", store, null, settings);
             TaskHubWorker hubWorker = new TaskHubWorker(service);
             hubWorker.AddTaskOrchestrations(typeof(TestOrchestration));
             hubWorker.AddTaskActivities(typeof(TestActivity1));
+            hubWorker.AddTaskActivities(typeof(TestActivity2));
             await service.CreateIfNotExistsAsync();
             await hubWorker.StartAsync();
         }

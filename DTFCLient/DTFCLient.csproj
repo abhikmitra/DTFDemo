@@ -33,15 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DurableTask.AzureStorage, Version=2.0.0.5, Culture=neutral, PublicKeyToken=d53979610a6e89dd, processorArchitecture=MSIL">
-      <HintPath>..\packages\DurableTask.AzureStorage.1.2.2\lib\net451\DurableTask.AzureStorage.dll</HintPath>
-    </Reference>
-    <Reference Include="DurableTask.Core, Version=2.0.0.6, Culture=neutral, PublicKeyToken=d53979610a6e89dd, processorArchitecture=MSIL">
-      <HintPath>..\packages\DurableTask.Core.2.0.0.6\lib\net451\DurableTask.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DurableTask.ServiceBus, Version=2.0.0.6, Culture=neutral, PublicKeyToken=d53979610a6e89dd, processorArchitecture=MSIL">
-      <HintPath>..\packages\DurableTask.ServiceBus.2.0.0.6\lib\net451\DurableTask.ServiceBus.dll</HintPath>
-    </Reference>
     <Reference Include="ImpromptuInterface, Version=6.2.2.0, Culture=neutral, PublicKeyToken=0b1781c923b2975b, processorArchitecture=MSIL">
       <HintPath>..\packages\ImpromptuInterface.6.2.2\lib\net40\ImpromptuInterface.dll</HintPath>
     </Reference>
@@ -93,6 +84,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\durabletask\src\DurableTask.AzureStorage\DurableTask.AzureStorage.csproj">
+      <Project>{5943fc0c-9e1a-41aa-9612-b6a55fd18ed1}</Project>
+      <Name>DurableTask.AzureStorage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\durabletask\src\DurableTask.Core\DurableTask.Core.csproj">
+      <Project>{99a5bab4-d6f9-4f88-8dfb-5fa6fb96a0b5}</Project>
+      <Name>DurableTask.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\durabletask\src\DurableTask.ServiceBus\DurableTask.ServiceBus.csproj">
+      <Project>{35a88501-4aba-4d53-95aa-1686d94bacfe}</Project>
+      <Name>DurableTask.ServiceBus</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domains\Domains.csproj">
       <Project>{DBDD5ACB-1C23-4D88-84D0-81D3EE34E420}</Project>
       <Name>Domains</Name>

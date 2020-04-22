@@ -16,13 +16,13 @@ namespace DTFCLient
     {
         static void Main(string[] args)
         {
-            IOrchestrationServiceInstanceStore store = new AzureTableInstanceStore("TestTaskHub", "UseDevelopmentStorage=true;DevelopmentStorageProxyUri=http://127.0.0.1;");
+            IOrchestrationServiceInstanceStore store = new AzureTableInstanceStore("TestTaskHub9", "UseDevelopmentStorage=true;DevelopmentStorageProxyUri=http://127.0.0.1;");
             var settings = new ServiceBusOrchestrationServiceSettings();
-            var service = new ServiceBusOrchestrationService("<servicebus>", "TestTaskHub", store, null, settings);
+            var service = new ServiceBusOrchestrationService("<ServiceBUsConnectionString>", "TestTaskHub9", store, null, settings);
             var client = new TaskHubClient(service);
             try
             {
-                var instance = client.CreateOrchestrationInstanceAsync(typeof(TestOrchestration), "InstanceId11", "Test Input").Result;
+                var instance = client.CreateOrchestrationInstanceAsync(typeof(TestOrchestration), "InstanceId5302", "Test Input").Result;
             }
             catch(Exception e)
             {

@@ -24,7 +24,12 @@ namespace Domains
             bool result = false;
             try
             {
-                result = await context.ScheduleWithRetry<bool>(typeof(TestActivity1), options, "Test Input");
+                Console.WriteLine("Schedule with Retry ");
+                var task1 = context.ScheduleWithRetry<bool>(typeof(TestActivity1), options, "Test Input1");
+                Console.WriteLine("Schedule with Retry Complete - Task 1");
+                var task2 = context.ScheduleWithRetry<bool>(typeof(TestActivity2), options, "Test Input2");
+                Console.WriteLine("Schedule with Retry Complete - Task 2");
+                await Task.WhenAll(task1, task2);
             }
             catch (Exception e)
             {

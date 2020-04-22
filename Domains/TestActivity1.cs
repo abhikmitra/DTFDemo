@@ -10,7 +10,10 @@ namespace Domains
     {
         protected override bool Execute(TaskContext context, string input)
         {
-            Console.WriteLine("Running Task, Execution Id = " + context.OrchestrationInstance.ExecutionId + ", Instance id = " + context.OrchestrationInstance.InstanceId);
+            
+            Console.WriteLine("\n\n***************************\nStarting Task 1, Execution Id = " + context.OrchestrationInstance.ExecutionId + ", Instance id = " + context.OrchestrationInstance.InstanceId +"\n****************\n\n\n");
+            Task.Delay(15000).GetAwaiter().GetResult();
+            Console.WriteLine("\n\n***************************\nEnding Task 1, Execution Id = " + context.OrchestrationInstance.ExecutionId + ", Instance id = " + context.OrchestrationInstance.InstanceId + "\n****************\n\n\n");
             return true;
         }
     }
