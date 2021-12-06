@@ -28,7 +28,7 @@ namespace DTFDemo
         {
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse("UseDevelopmentStorage=true;DevelopmentStorageProxyUri=http://127.0.0.1;");
 
-            IOrchestrationServiceInstanceStore store = new AzureTableInstanceStore("TestTaskHub9", "UseDevelopmentStorage=true;DevelopmentStorageProxyUri= http://127.0.0.1;");
+            IOrchestrationServiceInstanceStore store = new AzureTableInstanceStore("TestTaskHub9", "UseDevelopmentStorage=true;DevelopmentStorageProxyUri=http://127.0.0.1;");
             var settings = new ServiceBusOrchestrationServiceSettings();
             var service = new ServiceBusOrchestrationService("<ServiceBUsConnectionString>", "TestTaskHub9", store, null, settings);
             TaskHubWorker hubWorker = new TaskHubWorker(service);
